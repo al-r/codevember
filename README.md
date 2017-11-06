@@ -1,3 +1,3 @@
-#Codevember (2017)
+# Codevember (2017)
 
-A creative code sketching challenge. [http://codevember.xyz/]
+A creative code sketching challenge. http://codevember.xyz/
