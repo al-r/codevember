@@ -23,29 +23,15 @@ body {
 	width: 100%;
 }
 
-.sky {
+#sky {
 	background-color: transparent;
 	height: 100%;
 	position: relative;
 	width: 100%;
 }
 
-/*.wind-left {
-	-webkit-animation: comeinl 8s ease-out infinite forwards;
-	animation: comeinl 8s ease-out infinite forwards;
-	-webkit-transform: translate(-100%, 0);
-	transform: translate(-100%, 0);
-}
-
-.wind-right {
-	-webkit-animation: comeinr 10s ease-out 2s infinite forwards;
-	animation: comeinr 10s ease-out 2s infinite forwards;
-	-webkit-transform: translate(100%, 0);
-	transform: translate(100%, 0);
-}*/
-
 .cloud:before {
-	background-color: #0d161a;
+	background-color: #1f313a;
 	content: "";
 	-webkit-border-radius: 60px;
 	border-radius: 60px;
@@ -56,8 +42,20 @@ body {
 	width: 60px;
 }
 
+.cloud:after {
+	background-color: #313f47;
+	content: "";
+	-webkit-border-radius: 40px;
+	border-radius: 40px;
+	height: 40px;
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	width: 60px;
+}
+
 .cloud {
-	background-color: #0d161a;
+	background-color: #1f313a;
 	-webkit-border-radius: 60px;
 	border-radius: 60px;
 	height: 60px;
@@ -68,6 +66,7 @@ body {
 #mountain-container {
 	position: fixed;
 	bottom: -10px;
+	transform: translateX(50%);
 }
 
 .mountain {
@@ -155,12 +154,12 @@ body {
 
 @-webkit-keyframes darkersky {
 	from {background-color: #1E5B7A;}
-	to {background-color: #27363e;}
+	to {background-color: #415c69;}
 }
 
 @keyframes darkersky {
 	from {background-color: #1E5B7A;}
-	to {background-color: #27363e;}
+	to {background-color: #415c69;}
 }
 
 /*@-webkit-keyframes expandfragment {
