@@ -10,8 +10,8 @@ body {
 }
 
 body {
-	-webkit-animation: darkersky 2s ease-out 1s forwards;
-	animation: darkersky 2s ease-out 1s forwards;
+/* 	-webkit-animation: darkersky 2s ease-out 1s forwards; */
+/* 	animation: darkersky 2s ease-out 1s forwards; */
 	background-color: #1E5B7A;
 }
 
