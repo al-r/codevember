@@ -2,13 +2,13 @@ var windowH = window.innerHeight,
 	windowW = window.innerWidth;
 
 function displayClouds(){
-	var nbClouds = 10,
+	var nbClouds = 20,
 		spaceW = windowW / nbClouds,
-		spaceH = windowH / 2 / nbClouds;
+		spaceH = windowH / 1.5 / nbClouds;
 
 	for(var index=0; index < nbClouds; index++){
 		var cloud = document.createElement("div");
-		cloud.className += 'cloud';
+		cloud.className += "cloud";
 		var where = document.getElementById("sky");
 		where.appendChild(cloud);
 
@@ -20,5 +20,5 @@ function displayClouds(){
 };
 
 window.addEventListener('load', function(){
-
+	displayClouds();
 });
