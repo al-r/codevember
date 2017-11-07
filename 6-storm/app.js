@@ -1,24 +1,25 @@
 var windowH = window.innerHeight,
 	windowW = window.innerWidth;
 
-function displayClouds(){
+function displayClouds(classname){
 	var nbClouds = 20,
 		spaceW = windowW / nbClouds,
-		spaceH = windowH / 1.5 / nbClouds;
+		spaceH = windowH / nbClouds;
 
 	for(var index=0; index < nbClouds; index++){
 		var cloud = document.createElement("div");
-		cloud.className += "cloud";
+		cloud.className += classname;
 		var where = document.getElementById("sky");
 		where.appendChild(cloud);
 
-		var posLeft = Math.round(Math.random() * (spaceW * (index+1))),
-			posTop = Math.round(Math.random() * (spaceH * (index+1)));
-		cloud.style.left += posLeft + 'px';
+		var	posTop = Math.round(Math.random() * (spaceH * (index+1)));
 		cloud.style.top += posTop + 'px';
+		cloud.style.animationDuration = 5 + Math.round(Math.random() * 20) + "s";
+		cloud.style.animationDelay = index + "s";
 	};
 };
 
 window.addEventListener('load', function(){
-	displayClouds();
+	displayClouds("cloud cloud-left");
+	displayClouds("cloud cloud-right");
 });
