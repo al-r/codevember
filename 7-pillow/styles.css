@@ -10,17 +10,15 @@ body {
 }
 
 body {
-	/*-webkit-animation: darkersky 2s ease-out 1s forwards;
-	animation: darkersky 2s ease-out 1s forwards;*/
 	background-color: #54f6a0;
 }
 
 #pillow {
     background-color: #FFF;
     border-radius: 70px;
-    border-bottom: 30px solid #e1e1e1;
-    -webkit-box-shadow: 0 50px 5px -10px rgba(0,0,0,0.2);
-    box-shadow: 0 50px 5px -10px rgba(0,0,0,0.2);
+    border-bottom: 40px solid #e1e1e1;
+    -webkit-box-shadow: 0 30px 5px -10px rgba(0,0,0,0.2);
+    box-shadow: 0 30px 5px -10px rgba(0,0,0,0.2);
     height: 200px;
     position: absolute;
     top: 50%;
@@ -35,6 +33,7 @@ body {
     height: 50px;
     position: absolute;
     width:50px;
+    z-index: 1;
 }
 
 .top-left {
@@ -61,14 +60,62 @@ body {
 
 
 
-/* *** All Animations *** */
-/*Darker Sky*/
-@-webkit-keyframes darkersky {
-	from {background-color: #1E5B7A;}
-	to {background-color: #415c69;}
+.zzz {
+    animation-name: zzz;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    animation-direction: forwards;
+    color: rgba(160,84,246,1);
+    font-weight: bold;
+    position: absolute;
+    z-index: 100;
+    transform: translateY(100%);
+    font-family: 'Concert One', cursive;
 }
 
-@keyframes darkersky {
-	from {background-color: #1E5B7A;}
-	to {background-color: #415c69;}
+.zzz-z {
+    animation-delay: 0s;
+    right: 10px;
+}
+.zzz-zz {
+    animation-delay: 0.5s;
+    right: -20px;
+}
+.zzz-zzz {
+    animation-delay: 1s;
+    right: 0;
+}
+
+
+/* *** All Animations *** */
+/*Darker Sky*/
+@-webkit-keyframes zzz {
+	0% {
+        color: rgba(160,84,246,0);
+        font-size: 30px;
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+    100% {
+        color: rgba(160,84,246,1);
+        font-size: 72px;
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes zzz {
+    0% {
+        color: rgba(160,84,246,0);
+        font-size: 30px;
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+    100% {
+        color: rgba(160,84,246,1);
+        font-size: 72px;
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
 }
