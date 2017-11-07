@@ -1,0 +1,74 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	height: 100%;
+	min-height: 100% !important;
+}
+
+body {
+	/*-webkit-animation: darkersky 2s ease-out 1s forwards;
+	animation: darkersky 2s ease-out 1s forwards;*/
+	background-color: #54f6a0;
+}
+
+#pillow {
+    background-color: #FFF;
+    border-radius: 70px;
+    border-bottom: 30px solid #e1e1e1;
+    -webkit-box-shadow: 0 50px 5px -10px rgba(0,0,0,0.2);
+    box-shadow: 0 50px 5px -10px rgba(0,0,0,0.2);
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    transform: translate(-50%, -50%);
+}
+
+.corner {
+    background-color: #fff;
+    border-radius: 20px;
+    height: 50px;
+    position: absolute;
+    width:50px;
+}
+
+.top-left {
+    top: 0;
+    left: 0;
+}
+
+.top-right {
+    top: 0;
+    right: 0;
+}
+
+.bottom-right {
+    background-color: #e1e1e1;
+    bottom: -45px;
+    right: 0;
+}
+
+.bottom-left {
+    background-color: #e1e1e1;
+    bottom: -45px;
+    left: 0;
+}
+
+
+
+/* *** All Animations *** */
+/*Darker Sky*/
+@-webkit-keyframes darkersky {
+	from {background-color: #1E5B7A;}
+	to {background-color: #415c69;}
+}
+
+@keyframes darkersky {
+	from {background-color: #1E5B7A;}
+	to {background-color: #415c69;}
+}
