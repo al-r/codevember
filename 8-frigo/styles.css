@@ -13,19 +13,25 @@ body {
 	background-color: #BBCDD7;
 }
 
+#container {
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+}
+
 #frigo {
     background-color: #d42916;
     border-radius: 20px;
     height: 400px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
     width: 250px;
-    transform: translate(-50%, -50%);
+    position: relative;
 }
 
 #frigo:before {
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.1);
     border-radius: 0 20px 20px 0;
     content: "";
     height: 400px;
@@ -35,6 +41,7 @@ body {
     bottom: 0;
     left: auto;
     width: 125px;
+    z-index: 0;
 }
 
 #freezer {
@@ -42,15 +49,24 @@ body {
     border: none;
     border-bottom: 10px solid #a92011;
     height: 33%;
+    position: relative;
     width: 100%;
+    z-index: 10;
 }
 
 #shelves {
-    background-color: #63bad4;
+    background-color: #91cee0;
+    border-top: 40px solid #63bad4;
+    border-right: 40px solid #72c0d8;
+    border-bottom: 20px solid #63bad4;
+    border-left: 40px solid #72c0d8;
+    box-sizing: border-box;
     border-radius: 0 0 20px 20px;
     height: 57%;
     margin: 5%;
+    position: relative;
     width: 90%;
+    z-index: 10;
 }
 
 
