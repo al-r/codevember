@@ -23,7 +23,7 @@ body {
 }
 
 /*Fridge*/
-#frigo {
+#fridge {
     background-color: #d42916;
     border-radius: 20px;
     display: inline-block;
@@ -32,7 +32,7 @@ body {
     width: 250px;
 }
 
-#frigo:before {
+#fridge:before {
     background-color: rgba(0,0,0,0.1);
     border-radius: 0 20px 20px 0;
     content: "";
