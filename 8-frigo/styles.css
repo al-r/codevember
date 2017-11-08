@@ -25,9 +25,10 @@ body {
 #frigo {
     background-color: #d42916;
     border-radius: 20px;
+    display: inline-block;
     height: 400px;
-    width: 250px;
     position: relative;
+    width: 250px;
 }
 
 #frigo:before {
@@ -81,6 +82,50 @@ body {
     position: relative;
     width: 90%;
     z-index: 10;
+}
+
+#door {
+    background-color: #91cee0;
+    border-top: 15px solid #d42916;
+    border-right: 10px solid #d42916;
+    border-bottom: 20px solid #d42916;
+    border-left: 10px solid #d42916;
+    border-radius: 0 0 20px 20px;
+    display: inline-block;
+    margin-top: 132px;
+    height: 225px;
+    width: 250px;
+}
+
+.leaves {
+    background-color: transparent;
+    border-style: solid;
+    border-color: transparent;
+    border-bottom-color: #0b6a14;
+    height: 0;
+    width: 0;
+}
+
+.leaves.top {
+    margin-top: -20px;
+    margin-left: 20px;
+    border-width: 20px;
+}
+.leaves.middle {
+    margin-top: -40px;
+    margin-left: 10px;
+    border-width: 30px;
+}
+.leaves.bottom {
+    margin-top: -50px;
+    border-width: 40px;
+}
+
+.trunk {
+    background-color: #542e08;
+    height: 20px;
+    margin-left: 30px;
+    width: 20px;
 }
 
 
