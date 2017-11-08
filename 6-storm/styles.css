@@ -78,6 +78,7 @@ body {
 }
 
 #mountain-container {
+    min-width: 660px;
 	position: fixed;
 	bottom: -10px;
 	transform: translateX(50%);
