@@ -10,7 +10,7 @@ body {
 }
 
 body {
-	background-color: #BBCDD7;
+	background-color: #D3EBF2;
 }
 
 #container {
@@ -22,6 +22,7 @@ body {
     width: auto;
 }
 
+/*Fridge*/
 #frigo {
     background-color: #d42916;
     border-radius: 20px;
@@ -71,9 +72,9 @@ body {
 
 #shelves {
     background-color: #91cee0;
-    border-top: 40px solid #63bad4;
+    border-top: 20px solid #63bad4;
     border-right: 40px solid #72c0d8;
-    border-bottom: 20px solid #63bad4;
+    border-bottom: 40px solid #63bad4;
     border-left: 40px solid #72c0d8;
     box-sizing: border-box;
     border-radius: 0 0 20px 20px;
@@ -97,36 +98,144 @@ body {
     width: 250px;
 }
 
+#door:before,
+#door:after {
+    background-color: #a92011;
+    content: "";
+    height: 30px;
+    position: absolute;
+    right: 270px;
+    width: 5px;
+}
+#door:before {
+    bottom: 175px;
+}
+#door:after {
+    bottom: 50px;
+}
+
+/*Landscape*/
+#landscape {
+    margin-top: 55px;
+}
+
+#tree {
+    width: auto;
+}
+
 .leaves {
     background-color: transparent;
     border-style: solid;
     border-color: transparent;
-    border-bottom-color: #0b6a14;
+    border-radius: 40px;
+    display: table;
+    margin: 0 auto;
     height: 0;
+    position: relative;
     width: 0;
 }
 
-.leaves.top {
-    margin-top: -20px;
-    margin-left: 20px;
-    border-width: 20px;
-}
-.leaves.middle {
-    margin-top: -40px;
-    margin-left: 10px;
+.leaves:nth-of-type(1) {
+    border-bottom-color: #6CA572;
+    margin-top: -30px;
     border-width: 30px;
+    z-index: 50;
 }
-.leaves.bottom {
-    margin-top: -50px;
-    border-width: 40px;
+.leaves:nth-of-type(2) {
+    border-bottom-color: #3B8742;
+    margin-top: -60px;
+    border-width: 45px;
+    z-index: 45;
+}
+.leaves:nth-of-type(3) {
+    border-bottom-color: #0b6a14;
+    margin-top: -87px;
+    border-width: 60px;
+    z-index: 40;
 }
 
 .trunk {
-    background-color: #542e08;
-    height: 20px;
-    margin-left: 30px;
+    background-color: #b0753a;
+    border-radius: 0 0 10px 10px;
+    display: table;
+    height: 25px;
+    margin: 0 auto;
+    position: relative;
+    width: 10px;
+    z-index: 50;
+}
+
+.trunk-shadow {
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 20px;
+    display: table;
+    height: 10px;
+    margin: -7px auto 0;
+    position: relative;
     width: 20px;
+    z-index: 45;
+}
+
+#ground {
+    background-color: transparent;
+    margin: -20px 0 0;
+    position: relative;
+    z-index: 40;
+}
+ .ground-item {
+    background-color: #fff;
+    border-radius: 50px;
+    display: table;
+    height: 15px;
+    margin: 0 auto -5px;
+ }
+
+.ground-item:nth-of-type(1){
+    width: 60px;
+}
+
+.ground-item:nth-of-type(2){
+    width: 90px;
+}
+
+.ground-item:nth-of-type(3){
+    width: 80px;
+}
+
+.ground-item:nth-of-type(4){
+    width: 40px;
+}
+
+/*weather*/
+.flake {
+    animation-name: snowing;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    animation-direction: forwards;
+    background-color: #FFF;
+    border-radius: 20px;
+    height: 8px;
+    width: 8px;
+    opacity: 0;
+    position: absolute;
+    z-index: 100;
+    top: 0;
 }
 
 
 /* *** All Animations *** */
+@-webkit-keyframes snowing {
+    0% {top: 0; opacity: 0;}
+    10% {opacity: 0.8;}
+    66% {top: 100%; opacity: 0.8;}
+    70% {top: 100%; opacity: 0;}
+    100% {top: 100%; opacity: 0;}
+}
+@keyframes snowing {
+    0% {top: 0; opacity: 0;}
+    10% {opacity: 0.8;}
+    66% {top: 100%; opacity: 0.8;}
+    70% {top: 100%; opacity: 0;}
+    100% {top: 100%; opacity: 0;}
+}
