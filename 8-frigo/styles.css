@@ -54,6 +54,20 @@ body {
     z-index: 10;
 }
 
+#freezer:before {
+    background-color: #a92011;
+    border-radius: 10px;
+    content: "";
+    height: 60px;
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: 10px;
+    left: 20px;
+    width: 8px;
+    z-index: 15px;
+}
+
 #shelves {
     background-color: #91cee0;
     border-top: 40px solid #63bad4;
