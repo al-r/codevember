@@ -1,0 +1,198 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	height: 100%;
+	min-height: 100% !important;
+}
+
+body {
+	background: #0c0105;
+	background: -moz-linear-gradient(top, #010c09 47%, #18030a 100%);
+	background: -webkit-linear-gradient(top, #010c09 47%,#18030a 100%);
+	background: linear-gradient(to bottom, #010c09 47%,#18030a 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#010c09', endColorstr='#18030a',GradientType=0 );
+	font-family: sans-serif;
+	font-size: 18px;
+}
+
+/* ********** ROCKET ********** */
+
+/* ********** PLANETS ********** */
+.planet{
+	border-radius: 500px;
+	border-right-style: solid;
+	position: fixed;
+}
+
+#planet-alpha {
+	background-color: #e34d0c;
+	border-right-color: #cc450a;
+	border-right-width: 100px;
+	box-shadow: 0 0 300px 100px rgba(227,77,12,0.3);
+	height: 500px;
+	bottom: -150px;
+	left: -150px;
+	width: 400px;
+	z-index: 20;
+}
+#planet-alpha:before {
+	background-color: #e55e24;
+	border-top: 5px solid #cc450a;
+	border-radius: 30px;
+	content: "";
+	height: 30px;
+	position: absolute;
+	bottom: 400px;
+	left: 200px;
+	width: 30px;
+}
+#planet-alpha:after {
+	background-color: #e55e24;
+	border-top: 5px solid #cc450a;
+	border-right: 5px solid #cc450a;
+	border-radius: 70px;
+	content: "";
+	height: 70px;
+	position: absolute;
+	bottom: 200px;
+	left: 320px;
+	width: 70px;
+}
+
+#planet-omega {
+	background-color: #560b23;
+	border-right-width: 20px;
+	border-right-color: #4d091f;
+	box-shadow: 0 0 60px 20px rgba(86,11,35,0.3);
+	height: 100px;
+	bottom: 250px;
+	left: 80%;
+	width: 80px;
+	z-index: 20;
+}
+#planet-omega:before {
+	background-color: #773b4e;
+	border-radius: 10px;
+	border-top: 2px solid #4d091f;
+	border-right: 2px solid #4d091f;
+    content: "";
+    height: 10px;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    width: 10px;
+}
+#planet-omega:after {
+	background-color: #773b4e;
+	border-top: 3px solid #4d091f;
+	border-radius: 14px;
+	content: "";
+	height: 14px;
+	position: absolute;
+	bottom: 40px;
+	left: 64px;
+	width: 14px;
+}
+
+/* ********** PATH ********** */
+#path {
+	background-color: #010c09;
+	border: 1px solid #fff;
+	position: fixed;
+	border-radius: 200px;
+	bottom: 220px;
+	height: 150px;
+	left: 78%;
+	width: 150px;
+	z-index: 10;
+}
+#path:before {
+	content: "";
+	border-top: 2px dashed #fff;
+	height: 2px;
+	position: absolute;
+	right: -500px;
+	bottom: -95px;
+	-webkit-transform: rotate(-10deg);
+	transform: rotate(-10deg);
+	width: 3000px;
+	z-index: 5;
+}
+
+/* ********** STARS ********** */
+.stars {
+	animation-name: glow;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+	background-color: rgba(255,255,255,0.6);
+	border-radius: 6px;
+	box-shadow: 0 0 5px 12px rgba(255,255,255,0.1);
+	height: 6px;
+	position: fixed;
+	width: 6px;
+}
+.stars:before {
+	background-color: rgba(255,255,255,0.2);
+	border-radius: 16px;
+	box-shadow: 0 0 0 6px rgba(255,255,255,0.1);
+	content: "";
+	bottom: -3px;
+	left: -3px;
+	height: 12px;
+	position: absolute;
+	width: 12px;
+}
+
+.stars:nth-of-type(1) {
+    animation-duration: 0.7s;
+	animation-delay: 0.2s;
+	bottom: 20%;
+	left: 50%;
+	-webkit-transform: scale(0.3);
+	transform: scale(0.3);
+}
+.stars:nth-of-type(2) {
+    animation-duration: 0.8s;
+	animation-delay: 1.3s;
+	bottom: 90%;
+	left: 50%;
+	-webkit-transform: scale(0.5);
+	transform: scale(0.5);
+}
+.stars:nth-of-type(3) {
+    animation-duration: 0.5s;
+	animation-delay: 0.5s;
+	bottom: 60%;
+	left: 70%;
+}
+.stars:nth-of-type(4) {
+    animation-duration: 0.3s;
+	animation-delay: 1s;
+	bottom: 25%;
+	left: 85%;
+	-webkit-transform: scale(0.8);
+	transform: scale(0.8);
+}
+.stars:nth-of-type(5) {
+    animation-duration: 0.4s;
+	animation-delay: 2.1s;
+	bottom: 75%;
+	left: 35%;
+}
+
+
+/* ********** ANIMATION ********** */
+@-webkit-keyframes glow {
+	from {box-shadow: 0 0 5px 10px rgba(255,255,255,0.1);}
+	to {box-shadow: 0 0 25px 10px rgba(255,255,255,0.1);}
+}
+@keyframes glow {
+	from {box-shadow: 0 0 5px 10px rgba(255,255,255,0.1);}
+	to {box-shadow: 0 0 25px 10px rgba(255,255,255,0.1);}
+}
