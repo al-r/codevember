@@ -12,7 +12,7 @@ body {
 body {
 	background-color: #039efd;
 	font-family: 'Orbitron', sans-serif;
-	font-size: 20px;
+	font-size: 18px;
 }
 
 /* ********** POTATO ********** */
@@ -180,6 +180,7 @@ body {
 	transform: rotate(0deg);
 }
 #pepper:hover {
+	cursor: pointer;
 	-webkit-transition: all 1s;
 	transition: all 1s;
 	transform: rotate(-20deg);
@@ -213,8 +214,6 @@ body {
 	border-top: 10px solid #51160b;
 	border-radius: 65px 25px 50px 0;
 	color: #622d23;
-	font-family: 'Orbitron', sans-serif;
-	font-size: 20px;
 	font-weight: bold;
 	height: 60%;
 	margin-top: 20px;
