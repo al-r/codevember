@@ -21,15 +21,17 @@ body {
 
 /* ********** ROCKET ********** */
 #rocket {
+	-webkit-animation: launch 2s linear 1s 1 forwards, roundtrip 8s linear 3s infinite forwards;
+	animation: launch 2s linear 1s 1 forwards, roundtrip 8s linear 3s infinite forwards;
 	background-color: transparent;
     height: 70px;
     position: fixed;
-    bottom: 150px;
-    left: 500px;
+    bottom: 60px;
+    left: 150px;
     width: 200px;
     z-index: 100;
-    -webkit-transform: rotate(-10deg);
-    transform: rotate(-10deg);
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
 }
 
 #main-part {
@@ -40,7 +42,7 @@ body {
 	z-index: 200;
 }
 #main-part:before{
-	bbackground-color: transparent;
+	background-color: transparent;
 	border: 20px solid transparent;
 	border-left: 20px solid #B5092C;
 	border-radius: 100px;
@@ -119,8 +121,8 @@ body {
 }
 
 #fire {
-	-webkit-animation: fire 0.5s linear 0s infinite forwards;
-	animation: fire 0.5s linear 0s infinite forwards;
+	-webkit-animation: fire 0.5s linear 0s infinite alternate;
+	animation: fire 0.5s linear 0s infinite alternate;
 	background-color: #f9c800;
     border: 5px solid #f94c00;
     border-radius: 15px;
@@ -162,6 +164,37 @@ body {
 	left: -30px;
 	width: 0;
 	z-index: 220;
+}
+
+#smoke,
+#smoke:before,
+#smoke:after {
+	-webkit-animation: smoke 0.5s linear 0s 5 forwards;
+	animation: smoke 0.5s linear 0s 5 forwards;
+	background-color: #fff;
+	border-radius: 30px;
+	box-shadow: 0 0 10px 10px #fff;
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+	height: 30px;
+	opacity: 1;
+	position: fixed;
+	bottom: 100px;
+	left: 200px;
+	width: 30px;
+	z-index: 300;
+}
+#smoke:before {
+	animation-delay: 0.3s;
+	content: "";
+	bottom: 70px;
+    left: 200px;
+}
+#smoke:after {
+	animation-delay: 0.7s;
+	content: "";
+	bottom: 85px;
+    left: 210px;
 }
 
 /* ********** PLANETS ********** */
@@ -244,7 +277,7 @@ body {
 
 /* ********** PATH ********** */
 #path {
-	background-color: #010c09;
+	background-color: transparent;
 	border: 1px solid #fff;
 	position: fixed;
 	border-radius: 200px;
@@ -259,8 +292,8 @@ body {
     border-right: 2px dashed #fff;
     height: 2000px;
     position: absolute;
-    right: -110px;
-    bottom: -1500px;
+    right: 0;
+    bottom: -1300px;
     width: 2000px;
     z-index: 5;
     border-radius: 2000px;
@@ -343,10 +376,72 @@ body {
 
 /*Rocket*/
 @-webkit-keyframes fire {
-	from {-webkit-filter: blur(3px); filter: blur(3px);}
-	to {-webkit-filter: blur(2px); filter: blur(2px);}
+	from {-webkit-filter: blur(5px); filter: blur(5px);}
+	to {-webkit-filter: blur(3px); filter: blur(3px);}
 }
 @keyframes fire {
-	from {-webkit-filter: blur(3px); filter: blur(3px);}
-	to {-webkit-filter: blur(2px); filter: blur(2px);}
+	from {-webkit-filter: blur(5px); filter: blur(5px);}
+	to {-webkit-filter: blur(3px); filter: blur(3px);}
+}
+
+/*Rocket*/
+@-webkit-keyframes fire {
+	from {-webkit-filter: blur(5px); filter: blur(5px);}
+	to {-webkit-filter: blur(3px); filter: blur(3px);}
+}
+@keyframes fire {
+	from {-webkit-filter: blur(5px); filter: blur(5px);}
+	to {-webkit-filter: blur(3px); filter: blur(3px);}
+}
+
+@-webkit-keyframes smoke {
+	from {opacity: 1; width: 0; height: 0; box-shadow: 0 0 10px 10px rgba(255,255,255,0.5);}
+	to {opacity: 0;width: 30px; height: 30px; box-shadow: 0 0 20px 10px rgba(255,255,255,0.5);}
+}
+@keyframes smoke {
+	from {opacity: 1;width: 0; height: 0; box-shadow: 0 0 10px 10px rgba(255,255,255,0.5);}
+	to {opacity: 0;width: 30px; height: 30px; box-shadow: 0 0 20px 10px rgba(255,255,255,0.5);}
+}
+
+/*Path*/
+@-webkit-keyframes launch {
+	0% {-webkit-transform: scale(0.6); transform: scale(0.6); bottom: 60px;}
+	5% {-webkit-transform: scale(0.6); transform: scale(0.6); bottom: 65px;}
+	10% {-webkit-transform: scale(0.6); transform: scale(0.6); bottom: 60px;}
+	15% {-webkit-transform: scale(0.6); transform: scale(0.6); bottom: 65px;}
+	20% {-webkit-transform: scale(0.6); transform: scale(0.6); bottom: 60px;}
+	25% {-webkit-transform: scale(0.6); transform: scale(0.6); bottom: 65px; left: 150px;}
+	50% {-webkit-transform: scale(0.7); transform: scale(0.7); bottom: 60px; left: 170px;}
+	100% {-webkit-transform: scale(1); transform: scale(1); left: 30%;}
+}
+@keyframes launch {
+	0% {-webkit-transform: scale(0.6); transform: scale(0.6); bottom: 60px;}
+	5% {-webkit-transform: scale(0.6); transform: scale(0.6); bottom: 65px;}
+	10% {-webkit-transform: scale(0.6); transform: scale(0.6); bottom: 60px;}
+	15% {-webkit-transform: scale(0.6); transform: scale(0.6); bottom: 65px;}
+	20% {-webkit-transform: scale(0.6); transform: scale(0.6); bottom: 60px;}
+	25% {-webkit-transform: scale(0.6); transform: scale(0.6); bottom: 65px; left: 150px;}
+	50% {-webkit-transform: scale(0.7); transform: scale(0.7); bottom: 60px; left: 170px;}
+	100% {-webkit-transform: scale(1); transform: scale(1); left: 30%;}
+}
+
+@-webkit-keyframes roundtrip {
+	0% {-webkit-transform: scale(1) rotate(0deg); transform: scale(1) rotate(0deg); left: 30%; bottom: 60px; z-index: 250;}
+	20% {-webkit-transform: scale(0.6) rotate(-30deg); transform: scale(0.6) rotate(-30deg); left: 80%; bottom: 120px; z-index: 250;}
+	30% {-webkit-transform: scale(0.5) rotate(-130deg); transform: scale(0.5) rotate(-130deg); left: 85%; bottom: 300px; z-index: -1;}
+	40% {-webkit-transform: scale(0.3) rotate(-180deg); transform: scale(0.3) rotate(-180deg); left: 75%; bottom: 300px; z-index: -1;}
+	75% {-webkit-transform: scale(0.3) rotate(-180deg); transform: scale(0.3) rotate(-180deg); left: -50%; bottom: 250px; z-index: -1;}
+	76% {-webkit-transform: scale(1.2) rotate(0deg); transform: scale(1.2) rotate(0deg); left: -50%; bottom: 250px; z-index: 250;}
+	85% {-webkit-transform: scale(1.2) rotate(0deg); transform: scale(1.2) rotate(0deg); left: -50%; bottom: 0; z-index: 250;}
+	100% {-webkit-transform: scale(1) rotate(0deg); transform: scale(1) rotate(0deg); left: 30%; bottom: 60px; z-index: 250;}
+}
+@keyframes roundtrip {
+	0% {-webkit-transform: scale(1) rotate(0deg); transform: scale(1) rotate(0deg); left: 30%; bottom: 60px; z-index: 250;}
+	20% {-webkit-transform: scale(0.6) rotate(-30deg); transform: scale(0.6) rotate(-30deg); left: 80%; bottom: 120px; z-index: 250;}
+	30% {-webkit-transform: scale(0.5) rotate(-130deg); transform: scale(0.5) rotate(-130deg); left: 85%; bottom: 300px; z-index: -1;}
+	40% {-webkit-transform: scale(0.3) rotate(-180deg); transform: scale(0.3) rotate(-180deg); left: 75%; bottom: 300px; z-index: -1;}
+	75% {-webkit-transform: scale(0.3) rotate(-180deg); transform: scale(0.3) rotate(-180deg); left: -50%; bottom: 250px; z-index: -1;}
+	76% {-webkit-transform: scale(1.2) rotate(0deg); transform: scale(1.2) rotate(0deg); left: -50%; bottom: 250px; z-index: 250;}
+	85% {-webkit-transform: scale(1.2) rotate(0deg); transform: scale(1.2) rotate(0deg); left: -50%; bottom: 0; z-index: 250;}
+	100% {-webkit-transform: scale(1) rotate(0deg); transform: scale(1) rotate(0deg); left: 30%; bottom: 60px; z-index: 250;}
 }
