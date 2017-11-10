@@ -187,14 +187,16 @@ body {
 #smoke:before {
 	animation-delay: 0.3s;
 	content: "";
-	bottom: 70px;
-    left: 200px;
+	position: absolute;
+	bottom: -10px;
+    left: -10px;
 }
 #smoke:after {
 	animation-delay: 0.7s;
 	content: "";
-	bottom: 85px;
-    left: 210px;
+	position: absolute;
+	bottom: -20px;
+    left: -20px;
 }
 
 /* ********** PLANETS ********** */
@@ -431,8 +433,8 @@ body {
 	27% {-webkit-transform: scale(0.6) rotate(-130deg); transform: scale(0.5) rotate(-130deg); left: 83%; bottom: 200px; z-index: -1;}
 	36% {-webkit-transform: scale(0.3) rotate(-180deg); transform: scale(0.3) rotate(-180deg); left: 80%; bottom: 300px; z-index: -1;}
 	70% {-webkit-transform: scale(0.3) rotate(-180deg); transform: scale(0.3) rotate(-180deg); left: -50%; bottom: 250px; z-index: -1;}
-	71% {-webkit-transform: scale(1.2) rotate(0deg); transform: scale(1.2) rotate(0deg); left: -50%; bottom: 250px; z-index: 250;}
-	80% {-webkit-transform: scale(1.2) rotate(0deg); transform: scale(1.2) rotate(0deg); left: -50%; bottom: 0; z-index: 250;}
+	71% {-webkit-transform: scale(1.2) rotate(0deg); transform: scale(1.2) rotate(0deg); left: -50%; bottom: -60px; z-index: 250;}
+	80% {-webkit-transform: scale(1.2) rotate(0deg); transform: scale(1.2) rotate(0deg); left: -50%; bottom: -60px; z-index: 250;}
 	100% {-webkit-transform: scale(1) rotate(-10deg); transform: scale(1) rotate(-10deg); left: 30%; bottom: 60px; z-index: 250;}
 }
 @keyframes roundtrip {
@@ -441,7 +443,7 @@ body {
 	27% {-webkit-transform: scale(0.6) rotate(-130deg); transform: scale(0.5) rotate(-130deg); left: 83%; bottom: 200px; z-index: -1;}
 	36% {-webkit-transform: scale(0.3) rotate(-180deg); transform: scale(0.3) rotate(-180deg); left: 80%; bottom: 300px; z-index: -1;}
 	70% {-webkit-transform: scale(0.3) rotate(-180deg); transform: scale(0.3) rotate(-180deg); left: -50%; bottom: 250px; z-index: -1;}
-	71% {-webkit-transform: scale(1.2) rotate(0deg); transform: scale(1.2) rotate(0deg); left: -50%; bottom: 250px; z-index: 250;}
-	80% {-webkit-transform: scale(1.2) rotate(0deg); transform: scale(1.2) rotate(0deg); left: -50%; bottom: 0; z-index: 250;}
+	71% {-webkit-transform: scale(1.2) rotate(0deg); transform: scale(1.2) rotate(0deg); left: -50%; bottom: -60px; z-index: 250;}
+	80% {-webkit-transform: scale(1.2) rotate(0deg); transform: scale(1.2) rotate(0deg); left: -50%; bottom: -60px; z-index: 250;}
 	100% {-webkit-transform: scale(1) rotate(-10deg); transform: scale(1) rotate(-10deg); left: 30%; bottom: 60px; z-index: 250;}
 }
