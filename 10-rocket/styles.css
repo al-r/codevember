@@ -35,11 +35,38 @@ body {
 	height: 100%;
 	position: relative;
 	width: 100%;
+	z-index: 200;
+}
+#main-part:before{
+	bbackground-color: transparent;
+	border: 20px solid transparent;
+	border-left: 20px solid #B5092C;
+	border-radius: 100px;
+	content: "";
+	height: 0;
+	position: absolute;
+	top: 15px;
+	right: 4px;
+	width: 0;
+	z-index: 210;
+}
+#main-part:after{
+	background-color: transparent;
+	border: none;
+	border-right: 30px solid #B5092C;
+	border-radius: 100px;
+	content: "";
+	height: 100px;
+	position: absolute;
+	top: -15px;
+	left: -50px;
+	width: 100px;
+	z-index: -1;
 }
 
 #main-part .top {
 	background-color: transparent;
-	height: 45px;
+	height: 35px;
 	position: relative;
 	overflow: hidden;
 	width: 200px;
@@ -56,7 +83,7 @@ body {
 
 #main-part .bottom {
 	background-color: transparent;
-	height: 45px;
+	height: 35px;
 	position: relative;
 	overflow: hidden;
 	width: 200px;
@@ -69,6 +96,29 @@ body {
 	position: absolute;
 	bottom: 0;
 	width: 200px;
+}
+
+#window {
+	background: #9bbbc4;
+	background: -moz-linear-gradient(top, #9bbbc4 0%, #9bbbc4 49%, #82aab5 50%, #82aab5 100%);
+	background: -webkit-linear-gradient(top, #9bbbc4 0%,#9bbbc4 49%,#82aab5 50%,#82aab5 100%);
+	background: linear-gradient(to bottom, #9bbbc4 0%,#9bbbc4 49%,#82aab5 50%,#82aab5 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9bbbc4', endColorstr='#82aab5',GradientType=0 );
+	border: none;
+	border-right: 3px solid #508898;
+	box-shadow: 0 0 0 5px #B5092C;
+	border-radius: 30px;
+	height: 25px;
+	width: 22px;
+	position: absolute;
+	z-index: 210;
+	top: 22px;
+	right: 65px;
+}
+
+#fire {
+	background-color: #ff0;
+
 }
 
 /* ********** PLANETS ********** */
@@ -115,9 +165,9 @@ body {
 }
 
 #planet-omega {
-	background-color: #560b23;
+	background-color: #662338;
 	border-right-width: 20px;
-	border-right-color: #4d091f;
+	border-right-color: #5b1f32;
 	box-shadow: 0 0 60px 20px rgba(86,11,35,0.3);
 	height: 100px;
 	bottom: 250px;
