@@ -411,8 +411,8 @@ body {
 	15% {-webkit-transform: scale(0.6); transform: scale(0.6); bottom: 65px;}
 	20% {-webkit-transform: scale(0.6); transform: scale(0.6); bottom: 60px;}
 	25% {-webkit-transform: scale(0.6); transform: scale(0.6); bottom: 65px; left: 150px;}
-	50% {-webkit-transform: scale(0.7); transform: scale(0.7); bottom: 60px; left: 170px;}
-	100% {-webkit-transform: scale(1); transform: scale(1); left: 30%;}
+	50% {-webkit-transform: scale(0.7) rotate(0deg); transform: scale(0.7) rotate(0deg); bottom: 60px; left: 170px;}
+	100% {-webkit-transform: scale(1) rotate(-10deg); transform: scale(1) rotate(-10deg); left: 30%;}
 }
 @keyframes launch {
 	0% {-webkit-transform: scale(0.6); transform: scale(0.6); bottom: 60px;}
@@ -421,27 +421,27 @@ body {
 	15% {-webkit-transform: scale(0.6); transform: scale(0.6); bottom: 65px;}
 	20% {-webkit-transform: scale(0.6); transform: scale(0.6); bottom: 60px;}
 	25% {-webkit-transform: scale(0.6); transform: scale(0.6); bottom: 65px; left: 150px;}
-	50% {-webkit-transform: scale(0.7); transform: scale(0.7); bottom: 60px; left: 170px;}
-	100% {-webkit-transform: scale(1); transform: scale(1); left: 30%;}
+	50% {-webkit-transform: scale(0.7) rotate(0deg); transform: scale(0.7) rotate(0deg); bottom: 60px; left: 170px;}
+	100% {-webkit-transform: scale(1) rotate(-10deg); transform: scale(1) rotate(-10deg); left: 30%;}
 }
 
 @-webkit-keyframes roundtrip {
-	0% {-webkit-transform: scale(1) rotate(0deg); transform: scale(1) rotate(0deg); left: 30%; bottom: 60px; z-index: 250;}
-	20% {-webkit-transform: scale(0.6) rotate(-30deg); transform: scale(0.6) rotate(-30deg); left: 80%; bottom: 120px; z-index: 250;}
-	30% {-webkit-transform: scale(0.5) rotate(-130deg); transform: scale(0.5) rotate(-130deg); left: 85%; bottom: 300px; z-index: -1;}
-	40% {-webkit-transform: scale(0.3) rotate(-180deg); transform: scale(0.3) rotate(-180deg); left: 75%; bottom: 300px; z-index: -1;}
-	75% {-webkit-transform: scale(0.3) rotate(-180deg); transform: scale(0.3) rotate(-180deg); left: -50%; bottom: 250px; z-index: -1;}
-	76% {-webkit-transform: scale(1.2) rotate(0deg); transform: scale(1.2) rotate(0deg); left: -50%; bottom: 250px; z-index: 250;}
-	85% {-webkit-transform: scale(1.2) rotate(0deg); transform: scale(1.2) rotate(0deg); left: -50%; bottom: 0; z-index: 250;}
-	100% {-webkit-transform: scale(1) rotate(0deg); transform: scale(1) rotate(0deg); left: 30%; bottom: 60px; z-index: 250;}
+	0% {-webkit-transform: scale(1) rotate(-10deg); transform: scale(1) rotate(-10deg); left: 30%; bottom: 60px; z-index: 250;}
+	20% {-webkit-transform: scale(0.6) rotate(-20deg); transform: scale(0.6) rotate(-20deg); left: 75%; bottom: 120px; z-index: 250;}
+	27% {-webkit-transform: scale(0.6) rotate(-130deg); transform: scale(0.5) rotate(-130deg); left: 83%; bottom: 200px; z-index: -1;}
+	36% {-webkit-transform: scale(0.3) rotate(-180deg); transform: scale(0.3) rotate(-180deg); left: 80%; bottom: 300px; z-index: -1;}
+	70% {-webkit-transform: scale(0.3) rotate(-180deg); transform: scale(0.3) rotate(-180deg); left: -50%; bottom: 250px; z-index: -1;}
+	71% {-webkit-transform: scale(1.2) rotate(0deg); transform: scale(1.2) rotate(0deg); left: -50%; bottom: 250px; z-index: 250;}
+	80% {-webkit-transform: scale(1.2) rotate(0deg); transform: scale(1.2) rotate(0deg); left: -50%; bottom: 0; z-index: 250;}
+	100% {-webkit-transform: scale(1) rotate(-10deg); transform: scale(1) rotate(-10deg); left: 30%; bottom: 60px; z-index: 250;}
 }
 @keyframes roundtrip {
-	0% {-webkit-transform: scale(1) rotate(0deg); transform: scale(1) rotate(0deg); left: 30%; bottom: 60px; z-index: 250;}
-	20% {-webkit-transform: scale(0.6) rotate(-30deg); transform: scale(0.6) rotate(-30deg); left: 80%; bottom: 120px; z-index: 250;}
-	30% {-webkit-transform: scale(0.5) rotate(-130deg); transform: scale(0.5) rotate(-130deg); left: 85%; bottom: 300px; z-index: -1;}
-	40% {-webkit-transform: scale(0.3) rotate(-180deg); transform: scale(0.3) rotate(-180deg); left: 75%; bottom: 300px; z-index: -1;}
-	75% {-webkit-transform: scale(0.3) rotate(-180deg); transform: scale(0.3) rotate(-180deg); left: -50%; bottom: 250px; z-index: -1;}
-	76% {-webkit-transform: scale(1.2) rotate(0deg); transform: scale(1.2) rotate(0deg); left: -50%; bottom: 250px; z-index: 250;}
-	85% {-webkit-transform: scale(1.2) rotate(0deg); transform: scale(1.2) rotate(0deg); left: -50%; bottom: 0; z-index: 250;}
-	100% {-webkit-transform: scale(1) rotate(0deg); transform: scale(1) rotate(0deg); left: 30%; bottom: 60px; z-index: 250;}
+	0% {-webkit-transform: scale(1) rotate(-10deg); transform: scale(1) rotate(-10deg); left: 30%; bottom: 60px; z-index: 250;}
+	20% {-webkit-transform: scale(0.6) rotate(-20deg); transform: scale(0.6) rotate(-20deg); left: 75%; bottom: 120px; z-index: 250;}
+	27% {-webkit-transform: scale(0.6) rotate(-130deg); transform: scale(0.5) rotate(-130deg); left: 83%; bottom: 200px; z-index: -1;}
+	36% {-webkit-transform: scale(0.3) rotate(-180deg); transform: scale(0.3) rotate(-180deg); left: 80%; bottom: 300px; z-index: -1;}
+	70% {-webkit-transform: scale(0.3) rotate(-180deg); transform: scale(0.3) rotate(-180deg); left: -50%; bottom: 250px; z-index: -1;}
+	71% {-webkit-transform: scale(1.2) rotate(0deg); transform: scale(1.2) rotate(0deg); left: -50%; bottom: 250px; z-index: 250;}
+	80% {-webkit-transform: scale(1.2) rotate(0deg); transform: scale(1.2) rotate(0deg); left: -50%; bottom: 0; z-index: 250;}
+	100% {-webkit-transform: scale(1) rotate(-10deg); transform: scale(1) rotate(-10deg); left: 30%; bottom: 60px; z-index: 250;}
 }
