@@ -22,12 +22,14 @@ body {
 /* ********** ROCKET ********** */
 #rocket {
 	background-color: transparent;
-	height: 70px;
-	position: fixed;
-	bottom: 300px;
-	left: 500px;
-	width: 200px;
-	z-index: 100;
+    height: 70px;
+    position: fixed;
+    bottom: 150px;
+    left: 500px;
+    width: 200px;
+    z-index: 100;
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
 }
 
 #main-part {
@@ -117,8 +119,49 @@ body {
 }
 
 #fire {
-	background-color: #ff0;
-
+	-webkit-animation: fire 0.5s linear 0s infinite forwards;
+	animation: fire 0.5s linear 0s infinite forwards;
+	background-color: #f9c800;
+    border: 5px solid #f94c00;
+    border-radius: 15px;
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+    height: 15px;
+    position: absolute;
+    top: 24px;
+    left: 15px;
+    width: 15px;
+    z-index: 220;
+}
+#fire:before {
+	-webkit-animation: fire 0.5s linear 0s infinite alternate;
+	animation: fire 0.5s linear 0s infinite alternate;
+	border: 7px solid transparent;
+    border-right: 10px solid #f9c800;
+    content: "";
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: -14px;
+    width: 0;
+    z-index: 230;
+}
+#fire:after {
+	-webkit-animation: fire 0.5s linear 0s infinite alternate;
+	animation: fire 0.5s linear 0s infinite alternate;
+	border: 11px solid transparent;
+	border-right: 20px solid #f94c00;
+	content: "";
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+	height: 0;
+	position: absolute;
+	top: -4px;
+	left: -30px;
+	width: 0;
+	z-index: 220;
 }
 
 /* ********** PLANETS ********** */
@@ -213,15 +256,14 @@ body {
 }
 #path:before {
 	content: "";
-	border-top: 2px dashed #fff;
-	height: 2px;
-	position: absolute;
-	right: -500px;
-	bottom: -95px;
-	-webkit-transform: rotate(-10deg);
-	transform: rotate(-10deg);
-	width: 3000px;
-	z-index: 5;
+    border-right: 2px dashed #fff;
+    height: 2000px;
+    position: absolute;
+    right: -110px;
+    bottom: -1500px;
+    width: 2000px;
+    z-index: 5;
+    border-radius: 2000px;
 }
 
 /* ********** STARS ********** */
@@ -289,6 +331,7 @@ body {
 
 
 /* ********** ANIMATION ********** */
+/*Stars*/
 @-webkit-keyframes glow {
 	from {box-shadow: 0 0 5px 10px rgba(255,255,255,0.1);}
 	to {box-shadow: 0 0 25px 10px rgba(255,255,255,0.1);}
@@ -296,4 +339,14 @@ body {
 @keyframes glow {
 	from {box-shadow: 0 0 5px 10px rgba(255,255,255,0.1);}
 	to {box-shadow: 0 0 25px 10px rgba(255,255,255,0.1);}
+}
+
+/*Rocket*/
+@-webkit-keyframes fire {
+	from {-webkit-filter: blur(3px); filter: blur(3px);}
+	to {-webkit-filter: blur(2px); filter: blur(2px);}
+}
+@keyframes fire {
+	from {-webkit-filter: blur(3px); filter: blur(3px);}
+	to {-webkit-filter: blur(2px); filter: blur(2px);}
 }
