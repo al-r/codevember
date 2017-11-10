@@ -21,13 +21,12 @@ body {
 
 /* ********** ROCKET ********** */
 #rocket {
-	background-color: #fff;
-	border-radius: 500px;
+	background-color: transparent;
 	height: 70px;
 	position: fixed;
 	bottom: 300px;
 	left: 500px;
-	width: 150px;
+	width: 200px;
 	z-index: 100;
 }
 
@@ -40,23 +39,36 @@ body {
 
 #main-part .top {
 	background-color: transparent;
-	height: 25px;
+	height: 45px;
 	position: relative;
 	overflow: hidden;
+	width: 200px;
 }
 #main-part .top:before {
+	background-color: #fff;
 	border-radius: 200px;
 	content: "";
-	
+	height: 200px;
+	position: absolute;
+	top: 0;
+	width: 200px;
 }
 
 #main-part .bottom {
 	background-color: transparent;
+	height: 45px;
 	position: relative;
 	overflow: hidden;
+	width: 200px;
 }
 #main-part .bottom:before {
-
+	background-color: #f0f0f0;
+	border-radius: 200px;
+	content: "";
+	height: 200px;
+	position: absolute;
+	bottom: 0;
+	width: 200px;
 }
 
 /* ********** PLANETS ********** */
