@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-UK">
+    <head>
+        <title>Blood Orange</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Homemade+Apple" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+    </head>
+    <body>
+        <div id="container">
+            <svg width="500" height="420">
+                <defs>
+                    <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                      <stop offset="0%" style="stop-color:#808080;
+                      stop-opacity:0.5" />
+                      <stop offset="100%" style="stop-color:#a82109;stop-opacity:0.7" />
+                    </radialGradient>
+                    <radialGradient id="grad-shadow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                      <stop offset="0%" style="stop-color:#000;
+                      stop-opacity:0.5" />
+                      <stop offset="100%" style="stop-color:#00;stop-opacity:0" />
+                    </radialGradient>
+                </defs>
+
+                <circle id="body-shadow" cx="250" cy="250" r="150" style="fill:#e38715;"/>
+                <ellipse id="orange-body" cx="270" cy="250" rx="130" ry="145" style="fill:#fbaf1e;" />
+                <ellipse cx="300" cy="150" rx="30" ry="15" style="fill:#fff;opacity:0.2" />
+
+                <path id="leaf-top" d="M165,100 a3,1 0 0,1 80,0" style="fill:#4c834a;" transform="rotate(25 225 120)" />
+                <path id="leaf-bottom" d="M165,100 a2,1 0 0,0 80,0" style="fill:#20651e;" transform="rotate(25 225 120)" />
+                <rect id="twig1" x="247" y="80" height="40" width="3" style="fill:#a56027" />
+                <rect id="twig2" x="250" y="80" height="40" width="3" style="fill:#b77f52" />
+
+                <path id="eye-left-under" d="M170,230 a1,1 0 0,0 40,0" style="fill:url(#grad1);" />
+                <path id="eye-right-under" d="M290,230 a1,1 0 0,0 40,0" style="fill:url(#grad1);" />
+                <path id="eye-left" d="M170,230 a2,1 0 0,0 40,0" style="fill:#a82109;" />
+                <path id="eye-right" d="M290,230 a2,1 0 0,0 40,0" style="fill:#a82109;" />
+
+                <path id="mouth-under" d="M170,300 a3,1 0 0,0 160,0" style="fill:url(#grad1);" />
+                <path id="mouth" d="M170,300 a4,1 0 0,0 160,0" style="fill:#a82109;" />
+                <polygon id="teeth-left-shadow" points="185,305 205,305 195,335" style="fill:url(#grad-shadow);" />
+                <polygon id="teeth-left" points="190,300 210,300 200,330" style="fill:#fff;" />
+                <polygon id="teeth-right-shadow" points="285,305 305,305 295,335" style="fill:url(#grad-shadow);" />
+                <polygon id="teeth-right" points="290,300 310,300 300,330" style="fill:#fff;" />
+            </svg>
+            <h1>Blood Orange</h1>
+        </div>
+    </body>
+</html>

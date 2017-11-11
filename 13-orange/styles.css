@@ -1,0 +1,40 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	height: 100%;
+	min-height: 100% !important;
+}
+
+body {
+	background: #cc4800;
+	background: -moz-radial-gradient(center bottom, ellipse cover, #cc4800 1%, #190900 100%);
+	background: -webkit-radial-gradient(center bottom, ellipse cover, #cc4800 1%,#190900 100%);
+	background: radial-gradient(ellipse at center bottom, #cc4800 1%,#190900 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc4800', endColorstr='#190900',GradientType=1 );
+}
+
+h1 {
+	font-family: 'Cabin Sketch', cursive;
+	color: #811907;
+	margin: 0;
+	position: relative;
+	text-align: center;
+}
+
+svg {
+	display: block;
+	margin: 0 auto;
+	position: relative;
+}
+
+#container {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
