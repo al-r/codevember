@@ -149,7 +149,8 @@ head.rotation.x = -100;
 head.position.set(0,54,0);
 
 
-zebra.rotation.y = 0;
+zebra.rotation.y = 20;
+zebra.position.set(0,50,0);
 
 
 
