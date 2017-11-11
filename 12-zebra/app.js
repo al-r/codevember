@@ -5,7 +5,7 @@ var renderer = new THREE.WebGLRenderer({
   antialias: true
 });
 renderer.setSize(width, height);
-renderer.setClearColor(0x0E2255);
+renderer.setClearColor(0x47B2B2);
 document.body.appendChild(renderer.domElement);
 var scene = new THREE.Scene;
 
@@ -16,23 +16,19 @@ scene.add(pointLight);
 
 
 
-// //Texture
-// var texture = new THREE.TextureLoader().load( "https://cdn.pixabay.com/photo/2016/04/08/00/41/seamless-1315322_960_720.jpg" );
-// texture.wrapS = THREE.RepeatWrapping;
-// texture.wrapT = THREE.RepeatWrapping;
-// texture.repeat.set( 4, 4 );
 
 /* ***** ZEBRA ***** */
 var zebra;
 zebra = new THREE.Group();
-// zebra.rotation.set(0.4, 0.3, 0);
+zebra.name = "zebra";
 scene.add(zebra);
 
 var blackMaterial = new THREE.MeshLambertMaterial({
   color: 0x202020
 });
-var material = new THREE.MeshPhongMaterial( { ambient: 0x050505, color: 0xffffff, specular: 0x555555, shininess: 30 } );
-// var material = new THREE.MeshPhongMaterial( { map: THREE.ImageUtils.loadTexture("https://cdn.pixabay.com/photo/2016/04/08/00/41/seamless-1315322_960_720.jpg")});
+/*Picture from Pixabay (https://cdn.pixabay.com/photo/2016/04/08/00/41/seamless-1315322_960_720.jpg)*/
+var texture = new THREE.TextureLoader().load( 'https://raw.githubusercontent.com/al-r/codevember/master/12-zebra/zebra.jpg' );
+var material = new THREE.MeshBasicMaterial( { map: texture } );
 
 //body
 var geometry = new THREE.BoxGeometry(100, 70, 150);
@@ -163,8 +159,10 @@ camera.position.z = 400;
 scene.add(camera);
 camera.lookAt(cube.position);
 
-//Rotation factor
-var clock = new THREE.Clock;
+var orbit = new THREE.OrbitControls( camera, renderer.domElement );
+orbit.enableZoom = false;
+// //Rotation factor
+// var clock = new THREE.Clock;
 
 function render() {
   renderer.render(scene, camera);
