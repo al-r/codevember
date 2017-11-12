@@ -1,0 +1,306 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	background-color: #fff;
+	height: 100%;
+	min-height: 100% !important;
+}
+
+#container {
+	-webkit-animation: meltdown 7s ease-out 0s infinite forwards;
+	animation: meltdown 7s ease-out 0s infinite forwards;
+	height: 100%;
+	position: fixed;
+	/*top: -100%;*/
+	width: 100%;
+}
+
+#cheese-container {
+	background-color: #ffdb00;
+	height: 80%;
+	position: relative;
+	width: 100%;
+}
+
+.hole {
+	background-color: #ffe966;
+	border-radius: 200px;
+	border: none;
+	border-left: 10px solid #e5c500;
+	height: 50px;
+	position: absolute;
+	top: 0;
+	left: 50px;
+	width: 40px;
+}
+
+.hole:nth-of-type(1) {
+	top: 5%;
+	left: 5%;
+}
+.hole:nth-of-type(2) {
+	top: 25%;
+	left: 15%;
+}
+.hole:nth-of-type(3) {
+	top: 25%;
+	left: 30%;
+}
+.hole:nth-of-type(4) {
+	top: 35%;
+	left: 35%;
+}
+.hole:nth-of-type(5) {
+	top: 5%;
+	left: 45%;
+}
+.hole:nth-of-type(6) {
+	top: 50%;
+	left: 8%;
+}
+.hole:nth-of-type(7) {
+	top: 25%;
+	left: 67%;
+}
+.hole:nth-of-type(8) {
+	top: 90%;
+	left: 70%;
+}
+.hole:nth-of-type(9) {
+	top: 85%;
+	left: 45%;
+}
+.hole:nth-of-type(10) {
+	top: 15%;
+	left: 64%;
+}
+.hole:nth-of-type(11) {
+	top: 50%;
+	left: 91%;
+}
+.hole:nth-of-type(12) {
+	top: 59%;
+	left: 32%;
+}
+.hole:nth-of-type(13) {
+	top: 75%;
+	left: 85%;
+}
+.hole:nth-of-type(14) {
+	top: 15%;
+	left: 85%;
+}
+.hole:nth-of-type(15) {
+	top: 43%;
+	left: 64%;
+}
+.hole:nth-of-type(16) {
+	top: 89%;
+	left: 21%;
+}
+.hole:nth-of-type(17) {
+	top: 67%;
+	left: 4%;
+}
+.hole:nth-of-type(18) {
+	top: 13%;
+	left: 6%;
+}
+.hole:nth-of-type(19) {
+	top: 28%;
+	left: 79%;
+}
+.hole:nth-of-type(20) {
+	top: 56%;
+	left: 58%;
+}
+
+.hole:nth-of-type(3n+3) {
+	border-width: 15px;
+	height: 70px;
+	width: 55px;
+}
+.hole:nth-of-type(5n+2) {
+	border-width: 20px;
+	height: 100px;
+	width: 80px;
+}
+
+#melt-container {
+	background-color: #ffdb00;
+	height: 20%;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.melt {
+ 	background-color: #FFF;
+ 	border-radius: 300px 300px 0 0;
+ 	display: inline-block;
+ 	margin: 0;
+ 	height: 100%;
+ 	position: absolute;
+ 	bottom: 0;
+ 	width: 18%;
+ 	z-index: 30;
+}
+
+.melt:nth-of-type(2n+2) {
+	background-color: transparent;
+	position: absolute;
+	top: 0;
+	width: 3%;
+ 	z-index: 30;
+}
+.melt:nth-of-type(2n+2):before {
+	background-color: #ffdb00;
+	border-radius: 0 0 100px 100px;
+	content: "";
+	height: 100%;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+}
+.melt:nth-of-type(2n+2):after {
+	background-color: #FFF;
+	content: "";
+	height: 100%;
+	position: absolute;
+	top: 70%;
+	width: 100%;
+	z-index: -1;
+}
+
+.melt:nth-of-type(1) {
+ 	border-radius: 0 300px 0 0;
+ 	margin-left: 0;
+ 	height: 95%;
+ 	width: 10%;
+}
+.melt:nth-of-type(2) {
+	-webkit-animation: melt1 7s ease-out 0s infinite forwards;
+	animation: melt1 7s ease-out 0s infinite forwards;
+	left: 10%;
+ 	width: 1%;
+}
+.melt:nth-of-type(3) {
+ 	left: 11%;
+ 	width: 30%;
+}
+.melt:nth-of-type(4) {
+	left: 41%;
+}
+.melt:nth-of-type(5) {
+ 	height: 80%;
+	left: 44%;
+ 	width: 6%;
+}
+.melt:nth-of-type(6) {
+	-webkit-animation: melt1 7s ease-out 0s infinite forwards;
+	animation: melt1 7s ease-out 0s infinite forwards;
+	left: 50%;
+ 	width: 1%;
+}
+.melt:nth-of-type(7) {
+ 	height: 85%;
+ 	left: 51%;
+ 	width: 15%;
+}
+.melt:nth-of-type(8) {
+	-webkit-animation: melt1 7s ease-out 0s infinite forwards;
+	animation: melt1 7s ease-out 0s infinite forwards;
+	left: 66%;
+ 	width: 6%;
+}
+.melt:nth-of-type(9) {
+ 	left: 72%;
+ 	width: 9%;
+}
+.melt:nth-of-type(10) {
+	-webkit-animation: melt3 7s ease-out 0s infinite forwards;
+	animation: melt3 7s ease-out 0s infinite forwards;
+	left: 81%;
+ 	width: 1%;
+}
+.melt:nth-of-type(11) {
+ 	left: 82%;
+ 	width: 8%;
+}
+.melt:nth-of-type(12) {
+	-webkit-animation: melt2 7s ease-out 0s infinite forwards;
+	animation: melt2 7s ease-out 0s infinite forwards;
+	left: 90%;
+}
+.melt:nth-of-type(13) {
+ 	left: 93%;
+ 	width: 5%;
+}
+.melt:nth-of-type(14) {
+	-webkit-animation: melt4 7s ease-out 0s infinite forwards;
+	animation: melt4 7s ease-out 0s infinite forwards;
+	left: 98%;
+ 	width: 2%;
+}
+
+
+/* ***** ANIMATION ***** */
+@-webkit-keyframes meltdown {
+	0% {top: -100%;}
+	70% {top: 0;}
+	100% {top: 0;}
+}
+@keyframes meltdown {
+	0% {top: -100%;}
+	70% {top: 0;}
+	100% {top: 0;}
+}
+
+@-webkit-keyframes melt1 {
+	0% {top: -10%;}
+	70% {top: 0;}
+	100% {top: 0;}
+}
+@keyframes melt1 {
+	0% {top: -10%;}
+	70% {top: 0;}
+	100% {top: 0;}
+}
+
+@-webkit-keyframes melt2 {
+	0% {top: -30%;}
+	30% {top: 0;}
+	100% {top: 0;}
+}
+@keyframes melt2 {
+	0% {top: -30%;}
+	30% {top: 0;}
+	100% {top: 0;}
+}
+
+@-webkit-keyframes melt3 {
+	0% {top: -50%;}
+	70% {top: 0;}
+	100% {top: 0;}
+}
+@keyframes melt3 {
+	0% {top: -50%;}
+	70% {top: 0;}
+	100% {top: 0;}
+}
+
+@-webkit-keyframes melt4 {
+	0% {top: -40%;}
+	50% {top: 0;}
+	100% {top: 0;}
+}
+@keyframes melt3 {
+	0% {top: -40%;}
+	50% {top: 0;}
+	100% {top: 0;}
+}

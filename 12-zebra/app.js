@@ -28,8 +28,8 @@ var blackMaterial = new THREE.MeshLambertMaterial({
 /*Picture from Pixabay (https://cdn.pixabay.com/photo/2016/04/08/00/41/seamless-1315322_960_720.jpg)*/
 var texture = new THREE.TextureLoader().load( 'https://raw.githubusercontent.com/al-r/codevember/master/12-zebra/zebra.jpg' );
 var textureH = new THREE.TextureLoader().load( 'https://raw.githubusercontent.com/al-r/codevember/master/12-zebra/zebra-h.jpg' );
-var material = new THREE.MeshBasicMaterial( { map: texture } );
-var materialH = new THREE.MeshBasicMaterial( { map: textureH } );
+var material = new THREE.MeshBasicMaterial( { map: texture, color: 0xffffff } );
+var materialH = new THREE.MeshBasicMaterial( { map: textureH, color: 0xffffff } );
 
 //body
 var geometry = new THREE.BoxGeometry(100, 70, 150);
@@ -149,7 +149,7 @@ head.rotation.x = -100;
 head.position.set(0,54,0);
 
 
-zebra.rotation.y = 20;
+zebra.rotation.y = 45*(Math.PI/180);
 zebra.position.set(0,50,0);
 
 
@@ -210,7 +210,7 @@ var clock = new THREE.Clock;
 
 function render() {
   renderer.render(scene, camera);
-  zebra.rotation.y -= clock.getDelta();
+  // zebra.rotation.y -= clock.getDelta();
   requestAnimationFrame(render);
 }
 
