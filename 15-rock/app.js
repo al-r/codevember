@@ -18,45 +18,44 @@ scene.add(pointLight);
 
 
 /* ***** ROCKS ***** */
-var rocks;
-rocks = new THREE.Group();
-scene.add(rocks);
-
 var material = new THREE.MeshLambertMaterial({
   color: 0x745848
 });
 
-//Rock
-// var geometry = new THREE.BoxGeometry(20, 150, 20);
-var geometry = new THREE.DodecahedronGeometry(50,0);
-var rock = new THREE.Mesh(geometry, material);
-rock.position.set(50,-50,65);
-rocks.add(rock);
+var rocks;
+for (i=1;i<10;i++){
+	rocks = new THREE.Group();
+	scene.add(rocks);
+	rocks.name = "rocks" + i;
+	rocks.position.set(Math.round(Math.random()*100*i),Math.round(Math.random()*100*i),Math.round(Math.random()*100*i));
+	console.log("rocks", rocks);
 
-//Ground
-// var geometry = new THREE.PlaneGeometry( 5, 20, 32 );
-// var material = new THREE.MeshBasicMaterial( {color: 0xffff00, side: THREE.DoubleSide} );
-// var plane = new THREE.Mesh( geometry, material );
-// scene.add( plane );
+	//Rock
+	for (index=1;index<10;index++){
+		var geometry = new THREE.DodecahedronGeometry(50,0);
+		var rock = new THREE.Mesh(geometry, material);
+		rock.name = "rock" + i;
+		rock.position.set(Math.round(Math.random()*100),Math.round(Math.random()*100),Math.round(Math.random()*100));
+		rocks.add(rock);
+	}
+}
+
+/* ***** GROUND ***** */
+var geometry = new THREE.PlaneGeometry( 1000, 500, 32 );
+var material = new THREE.MeshLambertMaterial( {color: 0x808080, side: THREE.DoubleSide} );
+var ground = new THREE.Mesh( geometry, material );
+ground.rotation.x = 90*(Math.PI/180);
+ground.position.set(0,-100,0);
+scene.add( ground );
+
+//When rocks touch plane, bounce, break in smaller pieces (between 2 to 5), and roll
 
 
 rocks.rotation.y = 45*(Math.PI/180);
-// rocks.position.set(0,50,0);
 
 
 
 
-
-//camera (sky like the sun and //reflective greenhouse effect)
-// var skyboxGeometry = new THREE.CubeGeometry(10000, 10000, 10000);
-// var skyboxMaterial = new THREE.MeshBasicMaterial({
-//   color: 0xFFFFFF,
-//   side: THREE.BackSide
-// });
-// var skybox = new THREE.Mesh(skyboxGeometry, skyboxMaterial);
-
-//Add the skybox (lights)
-// scene.add(skybox);
 
 //Camera
 var camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 10000);
