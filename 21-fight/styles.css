@@ -9,6 +9,10 @@ body {
 	min-height: 100% !important;
 }
 
+body {
+	background-color: #f0b5be;
+}
+
 #soap-rack {
 	/*background-color: #1f1513;
 	background: repeating-linear-gradient(45deg, #1f1513, #1f1513 2px, #352c2a 2px, #352c2a 4px);
@@ -44,4 +48,56 @@ body {
 	text-transform: uppercase;
 	transform: rotate3d(1, 0, 0, 15deg);
 	width: 230px;
+}
+
+.bubble {
+	background-color: rgba(191,238,242,0.3);
+	border-radius: 200px;
+	border: none;
+	border-left: 5px solid rgba(235,249,251,0.3);
+	box-shadow: 0 0 0 5px rgba(191,238,242,0.3);
+	height: 30px;
+	position: absolute;
+	transform: rotate(30deg);
+	width: 25px;
+}
+.bubble:after {
+	background-color: transparent;
+	border-radius: 200px;
+	border: none;
+	border-right: 5px solid rgba(114,142,145,0.1);
+	content: "";
+	height: 40px;
+	position: absolute;
+	right: -5px;
+	bottom: -5px;
+	width: 35px;
+}
+
+.bubble.small {
+	border-width: 2px;
+	box-shadow: 0 0 0 2px rgba(191,238,242,0.3);
+	height: 6px;
+	width: 5px;
+}
+.bubble.small:after {
+	border-width: 2px;
+	height: 10px;
+	right: -2px;
+	bottom: -2px;
+	width: 9px;
+}
+
+.bubble.large{
+	border-width: 10px;
+	box-shadow: 0 0 0 10px rgba(191,238,242,0.3);
+	height: 60px;
+	width: 50px;
+}
+.bubble.large:after {
+	border-width: 10px;
+	height: 80px;
+	right: -10px;
+	bottom: -10px;
+	width: 70px;
 }
