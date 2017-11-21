@@ -22,37 +22,38 @@ lightPosition4D.z = light.position.z;
 lightPosition4D.w = 0.001;
 
 
+// function test(){
+    /* ***** ROCKS ***** */
+    var material = new THREE.MeshLambertMaterial({
+      color: 0x745848,
+      emissive: 0x222222
+    });
 
-/* ***** ROCKS ***** */
-var material = new THREE.MeshLambertMaterial({
-  color: 0x745848,
-  emissive: 0x222222
-});
+    var rocks;
+    var rock;
+    // for (i=1;i<30;i++){
+      rocks = new THREE.Group();
+      scene.add(rocks);
+      rocks.name = "rocks";
+      rocks.position.set(Math.round(Math.random()*100),2000,0);
+      console.log("rocks", rocks);
 
-var rocks;
-var rock;
-// for (i=1;i<3;i++){
-	rocks = new THREE.Group();
-	scene.add(rocks);
-	rocks.name = "rocks";
-	rocks.position.set(Math.round(Math.random()*100),2000,0);
-	console.log("rocks", rocks);
+      //Rock
+      for (index=1;index<10;index++){
+        var geometry = new THREE.DodecahedronGeometry(300,0);
+        var rock = new THREE.Mesh(geometry, material);
+        rock.name = "rock" + index;
+        rock.position.y = 0;
+        rocks.add(rock);
+      }
 
-	//Rock
-	for (index=1;index<10;index++){
-		var geometry = new THREE.DodecahedronGeometry(300,0);
-		var rock = new THREE.Mesh(geometry, material);
-		rock.name = "rock" + index;
-		// rock.position.x = Math.round(Math.random*100);
-		rock.position.y = 0;
-		// rock.position.z = Math.round(Math.random*100);
-		rocks.add(rock);
-	}
+      var rockShadow = new THREE.ShadowMesh( rock );
+      scene.add( rockShadow );
 
-	var rockShadow = new THREE.ShadowMesh( rock );
-	scene.add( rockShadow );
-
+    // }
 // }
+
+// test();
 
 /* ***** GROUND ***** */
 var groundGeometry = new THREE.BoxGeometry( 10000, 0.01, 10000 );
@@ -92,6 +93,7 @@ function render() {
   		rocks.position.z += frametime *2000;
   		if(rocks.position.z > 10000) {
   			rocks.position.z -= frametime *2000;
+  			scene.remove(rocks);
   		}
   	}
   	if(rocks.position.y  > 2000){
