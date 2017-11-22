@@ -51,6 +51,17 @@ body {
 	right: -10px;
 	width: 1px;
 }
+#soap:after {
+	background-color: transparent;
+	border: 165px solid transparent;
+	border-left: 15px solid #f0b5be;
+	content: "";
+	height: 1px;
+	position: absolute;
+	top: -165px;
+	left: 0;
+	width: 1px;
+}
 #soap:first-line {
 	font-size: 50px;
 }
