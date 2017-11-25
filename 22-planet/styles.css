@@ -101,3 +101,220 @@ body {
 	top: 0;
 	z-index: 500;
 }
+
+/* ***** MOONS ***** */
+.path {
+	-webkit-animation: gravitate 12s linear 0s infinite forwards;
+	animation: gravitate 12s linear 0s infinite forwards;
+	background-color: transparent;
+	border-radius: 600px;
+	height: 600px;
+	position: absolute;
+	top: -150px;
+	left: -150px;
+	width: 600px;
+	-webkit-transform: rotateX(65deg);
+	-webkit-transform-style: preserve-3d;
+	transform: rotateX(65deg);
+	transform-style: preserve-3d;
+}
+.moon {
+	-webkit-animation: rotate 12s linear 0s infinite forwards;
+	animation: rotate 12s linear 0s infinite forwards;
+	background-color: #d5eeed;
+	border-radius: 10px;
+	height: 10px;
+	position: absolute;
+	bottom: 25px;
+	left: 50%;
+	-webkit-transform: rotateX(-65deg);
+	-webkit-transform-style: preserve-3d;
+	transform: rotateX(-65deg);
+	transform-style: preserve-3d;
+	width: 10px;
+	z-index: 3000;
+}
+.moon:before {
+	border: none;
+	border-left: 2px solid rgba(0,0,0,0.5);
+	border-radius: 10px;
+	content: "";
+	height: 10px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 8px;
+}
+.moon:after {
+	-webkit-animation: shadow 12s linear 0s infinite forwards;
+	animation: shadow 12s linear 0s infinite forwards;
+	background-color: #000;
+	border-radius: 7px;
+	content: "";
+	-webkit-filter: blur(2px);
+	filter: blur(2px);
+	height: 7px;
+	opacity: 0.75;
+	position: absolute;
+	bottom: -5px;
+	left: -20px;
+	width: 7px;
+	z-index: 3000;
+}
+
+.pandora {
+	animation-duration: 7s;
+}
+.pandora .moon {
+	animation-duration: 7s;
+	background-color: #897667;
+	bottom: 40px;
+}
+.pandora .moon:after {
+	animation-duration: 7s;
+}
+
+.cassini {
+	animation-duration: 4s;
+}
+.cassini .moon {
+	animation-duration: 4s;
+	background-color: #946e4f;
+	bottom: 100px;
+}
+.cassini .moon:after {
+	animation-duration: 4s;
+}
+
+/* ***** ANIMATIONS ***** */
+@-webkit-keyframes gravitate {
+	0% {
+		-webkit-transform: rotateX(65deg) rotateZ(0deg);
+		transform: rotateX(65deg) rotateZ(0deg);
+		z-index: 3000;
+	}
+	40% {
+		z-index: 550;
+	}
+	67% {
+		z-index: 550;
+	}
+	100% {
+		-webkit-transform: rotateX(65deg) rotateZ(-360deg);
+		transform: rotateX(65deg) rotateZ(-360deg);
+		z-index: 3000;
+	}
+}
+@keyframes gravitate {
+	0% {
+		-webkit-transform: rotateX(65deg) rotateZ(0deg);
+		transform: rotateX(65deg) rotateZ(0deg);
+		z-index: 3000;
+	}
+	40% {
+		z-index: 550;
+	}
+	67% {
+		z-index: 550;
+	}
+	100% {
+		-webkit-transform: rotateX(65deg) rotateZ(-360deg);
+		transform: rotateX(65deg) rotateZ(-360deg);
+		z-index: 3000;
+	}
+}
+
+@-webkit-keyframes rotate {
+	0% {
+		-webkit-transform: rotateX(-65deg) rotateY(0deg);
+		transform: rotateX(-65deg) rotateY(0deg);
+	}
+	25% {
+		-webkit-transform: rotateX(-65deg) rotateY(-90deg);
+		transform: rotateX(-65deg) rotateY(-90deg);
+	}
+	50% {
+		-webkit-transform: rotateX(-65deg) rotateY(-180deg);
+		transform: rotateX(-65deg) rotateY(-180deg);
+	}
+	51% {
+		-webkit-transform: rotateX(-65deg) rotateY(180deg);
+		transform: rotateX(-65deg) rotateY(180deg);
+	}
+	65% {
+		-webkit-transform: rotateX(-65deg) rotateY(90deg);
+		transform: rotateX(-65deg) rotateY(90deg);
+	}
+	100% {
+		-webkit-transform: rotateX(-65deg) rotateY(0deg);
+		transform: rotateX(-65deg) rotateY(0deg);
+	}
+}
+@keyframes rotate {
+	0% {
+		-webkit-transform: rotateX(-65deg) rotateY(0deg);
+		transform: rotateX(-65deg) rotateY(0deg);
+	}
+	25% {
+		-webkit-transform: rotateX(-65deg) rotateY(-90deg);
+		transform: rotateX(-65deg) rotateY(-90deg);
+	}
+	50% {
+		-webkit-transform: rotateX(-65deg) rotateY(-180deg);
+		transform: rotateX(-65deg) rotateY(-180deg);
+	}
+	51% {
+		-webkit-transform: rotateX(-65deg) rotateY(180deg);
+		transform: rotateX(-65deg) rotateY(180deg);
+	}
+	65% {
+		-webkit-transform: rotateX(-65deg) rotateY(90deg);
+		transform: rotateX(-65deg) rotateY(90deg);
+	}
+	100% {
+		-webkit-transform: rotateX(-65deg) rotateY(0deg);
+		transform: rotateX(-65deg) rotateY(0deg);
+	}
+}
+
+
+@-webkit-keyframes shadow {
+	0% {
+		opacity: 1;
+	}
+	9% {
+		opacity: 1;
+	}
+	10% {
+		opacity: 0;
+	}
+	90% {
+		opacity: 0;
+	}
+	91% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes shadow {
+	0% {
+		opacity: 1;
+	}
+	9% {
+		opacity: 1;
+	}
+	10% {
+		opacity: 0;
+	}
+	90% {
+		opacity: 0;
+	}
+	91% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
