@@ -1,0 +1,103 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	background-color: #000;
+	height: 100%;
+	min-height: 100% !important;
+}
+
+#container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+/* ***** SPHERE ***** */
+#planet {
+	background: #D4B47B;
+	background: -moz-radial-gradient(140px 40px, circle cover,  rgba(95,90,81,1) 0%, rgba(162,143,111,1) 8%, rgba(205,181,137,1) 15%, rgba(184,164,129,1) 17%, rgba(205,181,137,1) 20%, rgba(212,180,123,1) 41%, rgba(155,128,86,1) 43%, rgba(212,180,123,1) 50%, rgba(212,180,123,1) 79%, rgba(179,159,124,1) 100%);
+	background: -webkit-radial-gradient(140px 40px, circle cover,  rgba(95,90,81,1) 0%,rgba(162,143,111,1) 8%,rgba(205,181,137,1) 15%,rgba(184,164,129,1) 17%,rgba(205,181,137,1) 20%,rgba(212,180,123,1) 41%,rgba(155,128,86,1) 43%,rgba(212,180,123,1) 50%,rgba(212,180,123,1) 79%,rgba(179,159,124,1) 100%);
+	background: radial-gradient(circle at 140px 40px,  rgba(95,90,81,1) 0%,rgba(162,143,111,1) 8%,rgba(205,181,137,1) 15%,rgba(184,164,129,1) 17%,rgba(205,181,137,1) 20%,rgba(212,180,123,1) 41%,rgba(155,128,86,1) 43%,rgba(212,180,123,1) 50%,rgba(212,180,123,1) 79%,rgba(179,159,124,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5f5a51', endColorstr='#b39f7c',GradientType=1 );
+	border-radius: 300px;
+	height: 300px;
+	position: relative;
+	width: 300px;
+	z-index: 950;
+}
+#planet:before {
+	background-color: transparent;
+	border: none;
+	border-left: 100px solid rgba(0,0,0,0.75);
+	border-radius: 300px;
+	content: "";
+	-webkit-filter: blur(10px);
+	filter: blur(10px);
+	height: 320px;
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	-webkit-transform: rotate(-20deg);
+	transform: rotate(-20deg);
+	width: 300px;
+	z-index: 1000;
+}
+
+#planet-shadow {
+	background-color: rgba(0,0,0,0.75);
+	border-radius: 400px;
+	-webkit-filter: blur(10px);
+	filter: blur(10px);
+	height: 400px;
+	position: absolute;
+	top: -20px;
+	left: -140px;
+	-webkit-transform: rotate3d(1,0.5,0,75deg);
+	transform: rotate3d(1,0.5,0,75deg);
+	width: 500px;
+	z-index: 600;
+}
+
+
+/* ***** RINGS ***** */
+.rings {
+	overflow: hidden;
+	position: absolute;
+	left: -150px;
+	width: 600px;
+}
+.rings:after {
+	background: repeating-radial-gradient(circle at center, transparent 0, transparent 182px, #9b8056 182px, #9b8056 183px, transparent 183px, transparent 185px, #9b8056 185px, #9b8056 186px, transparent 186px, transparent 188px, #9b8056 188px, #9b8056 189px, transparent 189px, transparent 191px, #9b8056 191px, #9b8056 192px, transparent 192px, transparent 194px, #9b8056 194px, #9b8056 195px, transparent 195px, transparent 197px, #9b8056 197px, #9b8056 198px, transparent 198px, transparent 200px, #9b8056 200px, #9b8056 201px, transparent 201px, transparent 203px, #9b8056 203px, #9b8056 204px, transparent 204px, transparent 206px, #9b8056 206px, #9b8056 207px, transparent 207px, transparent 209px, #9b8056 209px, #9b8056 210px, transparent 210px, #9b8056 250px, transparent 250px,transparent 260px, #5f5a51 260px, #5f5a51 261px, transparent 261px, transparent 262px, #5f5a51 262px, #5f5a51 263px, transparent 263px, transparent 264px, #5f5a51 264px, #5f5a51 265px, transparent 265px, #5f5a51 280px);
+	border-radius: 600px;
+	box-shadow: inset 0 0 20px 120px rgba(0,0,0,0.3);
+	content: "";
+	height: 600px;
+	position: absolute;
+	-webkit-transform: rotate3d(1,0,0,65deg);
+	transform: rotate3d(1,0,0,65deg);
+	width: 600px;
+}
+
+.rings.front {
+	height: 270px;
+	top: 180px;
+}
+.rings.front:after {
+	bottom: 0;
+	z-index: 1500;
+}
+
+.rings.back {
+	height: 330px;
+	top: -150px;
+}
+.rings.back:after {
+	top: 0;
+	z-index: 500;
+}
