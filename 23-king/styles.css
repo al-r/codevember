@@ -1,0 +1,142 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	background-color: #485674;
+	height: 100%;
+	min-height: 100% !important;
+}
+
+#container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+#wow {
+	-webkit-animation: glow 0.7s ease-in-out 0s infinite alternate;
+	animation: glow 0.7s ease-in-out 0s infinite alternate;
+	background: repeating-radial-gradient(transparent 0, transparent 10px, rgba(255,206,0,0.3) 25px);
+	border-radius: 350px;
+	height: 350px;
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	width: 350px;
+}
+
+#crown {
+	border: 50px solid transparent;
+	border-bottom: 50px solid #f6c700;
+	height: 0;
+	display: block;
+	margin: 0 auto -2px;
+	position: relative;
+	width: 0;
+}
+#crown:before,
+#crown:after{
+	content: "";
+	height: 0;
+	position: absolute;
+	width: 0;
+}
+#crown:before {
+	border: 25px solid transparent;
+	border-left:25px solid #f6c700;
+	bottom: -50px;
+	left: -50px;
+}
+#crown:after {
+	border:25px solid transparent;
+	border-right:25px solid #f6c700;
+	bottom: -50px;
+	right: -50px;
+}
+
+/* ***** BURGER ***** */
+/*Steak*/
+#burger {
+	background-color: #632b13;
+	border-radius: 150px;
+	height: 30px;
+	margin: 142px 0 45px;
+	position: relative;
+	width: 300px;
+}
+
+/*Top bun*/
+#burger:before,
+#burger:after {
+	background-color: #e18800;
+	border: none;
+	border-left: 30px solid rgba(0,0,0,0.3);
+	border-radius: 240px 240px 30px 30px;
+	content: "";
+	height: 120px;
+	position: absolute;
+	top: -142px;
+	left: 15px;
+	width: 240px;
+}
+
+/*Bottom bun*/
+#burger:after {
+	border-radius: 15px;
+	height: 45px;
+	top: auto;
+	bottom: -45px;
+}
+
+/*Tomato*/
+#ingredients {
+	background-color: #c9280b;
+	border-radius: 3px;
+	height: 15px;
+	position: absolute;
+	top: -22px;
+	width: 100%;
+}
+
+/*Lettuce*/
+#ingredients:before {
+	background-color: #118d19;
+	border-radius: 3px;
+	content: "";
+	height: 7px;
+	position: absolute;
+	bottom: -7px;
+	width: 100%;
+}
+#ingredients:after {
+	background-color: transparent;
+	border: none;
+	border-top: 15px dotted #118d19;
+	content: "";
+	height: 0;
+	position: absolute;
+	bottom: -15px;
+	width: 100%;
+}
+
+
+/* ***** ANIMATIONS ***** */
+@keyframes glow {
+	from {
+		background: repeating-radial-gradient(transparent 0, transparent 10px, rgba(255,206,0,0.1) 25px);
+		height: 100px;
+		width: 100px;
+	}
+	to {
+		background: repeating-radial-gradient(transparent 0, transparent 10px, rgba(255,206,0,0.3) 25px);
+		height: 350px;
+		width: 350px;
+	}
+}
