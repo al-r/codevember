@@ -17,18 +17,18 @@ body {
 
 #sun {
 	background-color: #FFCA9D;
-	box-shadow: 0 0 0 20px rgba(255,202,157,0.3);
+	box-shadow: 0 0 0 20px rgba(255,202,157,0.5);
 	border-radius: 120px;
 	height: 120px;
 	position: fixed;
-	right: 22%;
 	bottom: 130px;
+	left: 930px;
 	width: 120px;
 	z-index: 100;
 }
-#sun:after {
+#sun:before {
 	background-color: transparent;
-	border: 20px solid rgba(255,202,157,0.2);
+	border: 20px solid rgba(255,202,157,0.3);
 	box-shadow: 0 0 0 30px rgba(255,202,157,0.1);
 	content: "";
 	border-radius: 160px;
@@ -52,15 +52,7 @@ body {
 	width: 50px;
 }
 
-#stars {
-	background-image: linear-gradient(left, #f00 10px, #444 20px, #3465a4 21px, #203388 10rem, #204a87 100%);
-    height: 100%;
-    position: fixed;
-	width: 100%;
-	z-index: 1;
-}
-
-#landscape-container {
+.mountain {
 	background: transparent;
 	height: 200px;
 	position: fixed;
@@ -68,8 +60,8 @@ body {
 	width: 100%;
 	z-index: 100;
 }
-#landscape-container:before,
-#landscape-container:after {
+.mountain:before,
+.mountain:after {
 	background-color: #48485E;
 	background: -moz-linear-gradient(top,  rgba(94,92,113,1) 0%, rgba(56,56,89,1) 7%);
 	background: -webkit-linear-gradient(top,  rgba(94,92,113,1) 0%,rgba(56,56,89,1) 7%);
@@ -83,12 +75,12 @@ body {
 	left: auto;
 	width: 5000px;
 }
-#landscape-container:before {
+.mountain:before {
 	left: -2500px;
 	bottom: -4650px;
 	z-index: 80;
 }
-#landscape-container:after {
+.mountain:after {
 	right: -2300px;
 	bottom: -4850px;
 	z-index: 120;
